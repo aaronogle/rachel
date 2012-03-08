@@ -1,7 +1,0 @@
-#!/bin/bash
-while true;
-    do   
-        cd /opt/jiclient/
-        python /opt/jiclient/client.py &
-        python /opt/jiclient/browser.py >> /opt/jiclient/log && echo "[$(date)] Kiosk crashed" | mail -s "Childrens Kiosk Crash" -t aogle@rhcl.org
-    done

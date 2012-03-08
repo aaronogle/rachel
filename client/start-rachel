@@ -1,0 +1,7 @@
+#!/bin/bash
+while true;
+    do   
+        cd /opt/rachel/
+        python /opt/rachel/client.py &
+        python /opt/rachel/browser.py >> /opt/rachel/log && echo "[$(date)] Rachel crashed" >> /opt/rachel/log 
+    done

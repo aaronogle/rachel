@@ -4,7 +4,7 @@
 # Created by:  Aaron Ogle                     #
 # Date: 08/20/2011                            #
 #                                             #
-#                                             #
+#Project: Rachel                              #
 #                                             #
 ###############################################
 import gtk
@@ -37,7 +37,7 @@ class browser():
 		server=""
 		serverhttps="https://" + server
 		date = datetime.datetime.now()
-		print "[Browser Started] - " + date.strftime("%B %d, %Y at %H:%M")
+		print "[Rachel Started] - " + date.strftime("%B %d, %Y at %H:%M")
 		self.whitelist = self.load_whitelist()
 		
 		self.view = webkit.WebView()
