@@ -38,6 +38,4 @@ ln -s /home/rachel/.xsession /home/rachel/.xinitrc
 mv dmrc /home/rachel/.dmrc
 chown -R  rachel.users /home/rachel/
 mv rachel.desktop /usr/share/xsessions/
-
-~                                                                               
-~                           
+                     
