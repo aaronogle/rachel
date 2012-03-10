@@ -13,7 +13,7 @@ mv -i client/* .
 rm -rf client server
 chmod +x start-rachel
 cp start-rachel /usr/bin
-useradd $USER
+useradd $USER -m
 expect << EOF
 spawn passwd rachel
 expect "New Password:"
@@ -37,6 +37,7 @@ mv xsession /home/rachel/.xsession
 ln -s /home/rachel/.xsession /home/rachel/.xinitrc
 mv dmrc /home/rachel/.dmrc
 chown -R  rachel.users /home/rachel/
+mv rachel.desktop /usr/share/xsessions/
 
 ~                                                                               
 ~                           
