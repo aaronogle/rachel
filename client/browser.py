@@ -34,8 +34,8 @@ class XScreenSaverInfo( ctypes.Structure):
 class browser():
 
 	def __init__(self):
-		server = self.loadserver()
-		serverhttps="https://" + server
+		self.server = self.loadserver()
+		self.serverhttps="https://" + server
 		date = datetime.datetime.now()
 		print "[Rachel Started] - " + date.strftime("%B %d, %Y at %H:%M")
 		self.whitelist = self.load_whitelist()
