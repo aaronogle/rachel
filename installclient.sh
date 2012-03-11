@@ -38,4 +38,5 @@ chown -R  rachel.users /home/rachel/
 touch log
 chmod 777 log
 mv rachel.desktop /usr/share/xsessions/
-                     
+/usr/lib/lightdm/lightdm-set-defaults -s rachel
+
