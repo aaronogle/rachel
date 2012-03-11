@@ -23,7 +23,7 @@ send "${PASS}\r"
 expect eof;
 EOF
 
-usermod -G nopasswdlogin rachel
+usermod -G nopasswdlogin users rachel
 mkdir /home/rachel/.config/autostart
 cp Launchrachel.desktop /home/rachel/.config/autostart/
 openssl genrsa 1024 > key openssl req -new -x509 -nodes -sha1 -days 365 -key key > cert
@@ -37,6 +37,5 @@ mv xsession /home/rachel/.xsession
 ln -s /home/rachel/.xsession /home/rachel/.xinitrc
 mv dmrc /home/rachel/.dmrc
 chown -R  rachel.users /home/rachel/
-
-~                                                                               
-~                           
+touch log
+chmod 777 log
