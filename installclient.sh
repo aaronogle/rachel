@@ -23,9 +23,7 @@ send "${PASS}\r"
 expect eof;
 EOF
 
-usermod -G nopasswdlogin users rachel
-mkdir /home/rachel/.config/autostart
-cp Launchrachel.desktop /home/rachel/.config/autostart/
+usermod -a -G users,nopasswdlogin rachel
 openssl genrsa 1024 > key openssl req -new -x509 -nodes -sha1 -days 365 -key key > cert
 chmod -R 755 .
 chown -R root.users .
@@ -40,4 +38,8 @@ chown -R  rachel.users /home/rachel/
 touch log
 chmod 777 log
 mv rachel.desktop /usr/share/xsessions/
-                     
+/usr/lib/lightdm/lightdm-set-defaults -s rachel
+read -p "Please enter ip address to the rachel server Ex: [10.10.10.48]"
+echo $REPLY >> rachel.config
+chmod 755 rachel.config
+chown root.users rachel.config

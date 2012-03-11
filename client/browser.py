@@ -34,7 +34,7 @@ class XScreenSaverInfo( ctypes.Structure):
 class browser():
 
 	def __init__(self):
-		server=""
+		server = self.loadserver()
 		serverhttps="https://" + server
 		date = datetime.datetime.now()
 		print "[Rachel Started] - " + date.strftime("%B %d, %Y at %H:%M")
@@ -138,6 +138,11 @@ class browser():
 		lines = map(string.strip, whitelistfile.readlines())
 		whitelistfile.close()
 		return lines	
+      
+  def loadserver(self):
+    serverconfig = open("rachel.config", "r")
+    ip = serverconfig.readline()
+    return ip
 
 	def nullfunction(self):
 		return
