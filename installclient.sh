@@ -23,7 +23,7 @@ send "${PASS}\r"
 expect eof;
 EOF
 
-usermod -G nopasswdlogin users rachel
+usermod -a -G users,nopasswdlogin rachel
 openssl genrsa 1024 > key openssl req -new -x509 -nodes -sha1 -days 365 -key key > cert
 chmod -R 755 .
 chown -R root.users .
