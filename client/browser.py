@@ -139,10 +139,10 @@ class browser():
 		whitelistfile.close()
 		return lines	
       
-  def loadserver(self):
-    serverconfig = open("rachel.config", "r")
-    ip = serverconfig.readline()
-    return ip
+  	def loadserver(self):
+    		serverconfig = open("rachel.config", "r")
+    		ip = serverconfig.readline()
+    		return ip
 
 	def nullfunction(self):
 		return
