@@ -35,7 +35,7 @@ class browser():
 
 	def __init__(self):
 		self.server = self.loadserver()
-		self.serverhttps="https://" + server
+		self.serverhttps="https://" + self.server
 		date = datetime.datetime.now()
 		print "[Rachel Started] - " + date.strftime("%B %d, %Y at %H:%M")
 		self.whitelist = self.load_whitelist()
@@ -94,7 +94,7 @@ class browser():
 		self.view.connect("resource-request-starting", self.resource_cb)
 		self.window.connect("destroy", self.destroy)
 		
-		self.view.open(serverhttps)
+		self.view.open(self.serverhttps)
 		self.homepage = True
 		self.launchidlecheck()
 
@@ -106,7 +106,7 @@ class browser():
 		self.sethome()
 
 	def sethome(self):
-		self.view.open(serverhttps)
+		self.view.open(self.serverhttps)
 		self.homepage = True
 
 	def title_changed(self,webview, frame, title):
@@ -130,7 +130,7 @@ class browser():
 	def resource_cb(self,view, frame, resource, request, response):
 		if self.isallowed(request.get_uri()) == -1:
 			print request.get_uri() + " DENIED"
-			request.set_uri(serverhttps)
+			request.set_uri(self.serverhttps)
 			self.homepage = True
 
 	def load_whitelist(self):
@@ -157,12 +157,12 @@ class browser():
 			self.nullfunction()
 		else:
 			if site.split('/')[2] == -1:
-				domain = server
+				domain = self.server
 		finally:
 			if domain not in self.whitelist:
 				return self.deny()
 			else:
-				if domain == server:
+				if domain == self.server:
 					self.homepage = True
 				else:
 					self.homepage = False
