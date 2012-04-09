@@ -41,5 +41,6 @@ mv rachel.desktop /usr/share/xsessions/
 /usr/lib/lightdm/lightdm-set-defaults -s rachel
 read -p "Please enter ip address to the rachel server Ex: [10.10.10.48]"
 echo $REPLY >> rachel.config
+echo $REPLY >> sitesallowed
 chmod 755 rachel.config
 chown root.users rachel.config
