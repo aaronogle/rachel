@@ -18,6 +18,8 @@ import datetime
 import threading
 import gobject
 import sys
+import socket
+from OpenSSL import SSL
 from subprocess import call
 
 class XScreenSaverInfo( ctypes.Structure):
@@ -101,7 +103,6 @@ class browser():
 	def main(self):
 		gtk.main()
 
-		
 	def homeclicked(self,btn):
 		self.sethome()
 
@@ -137,7 +138,7 @@ class browser():
 		whitelistfile = open("whitelisted", "r")
 		lines = map(string.strip, whitelistfile.readlines())
 		whitelistfile.close()
-		return lines	
+		return lines 
 
 	def nullfunction(self):
 		return
@@ -146,22 +147,28 @@ class browser():
 		return -1
 
 	def isallowed(self,site):
+		domain=""
+		basedomain=""
 		try:	
-			domain = site.split('/')[2]
+			if site.split('/')[2] == self.serverip:
+				domain = self.serverip
+			else:			
+				domain = site.split('/')[2]	
+				basedomain = domain.split('.')
+				basedomain = "*." + string.join(basedomain[len(basedomain)-(len(basedomain)-1):], '.')
+				
 		except IndexError:
-			self.nullfunction()
-		else:
-			if site.split('/')[2] == -1:
-				domain = server
+			self.nullfunction()	
 		finally:
-			if domain not in self.whitelist:
-				return self.deny()
-			else:
-				if domain == server:
-					self.homepage = True
-				else:
-					self.homepage = False
+			if basedomain in self.whitelist:
 				return 1
+			elif domain in self.whitelist:
+				return 1	
+			elif domain == self.serverip:
+				self.homepage = True				
+				return 1
+			else:
+				return self.deny()
 
 	def destroy(self,widget, data=None):
 		gtk.main_quit()
