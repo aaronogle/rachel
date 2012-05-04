@@ -155,7 +155,10 @@ class browser():
 			else:			
 				domain = site.split('/')[2]	
 				basedomain = domain.split('.')
-				basedomain = "*." + string.join(basedomain[len(basedomain)-(len(basedomain)-1):], '.')
+				if len(basedomain) > 1:
+					basedomain = "*." + string.join(basedomain[len(basedomain)-(len(basedomain)-1):], '.')
+				else:
+					basedomain = '*.' + domain
 				
 		except IndexError:
 			self.nullfunction()	
