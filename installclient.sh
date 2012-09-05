@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER=rachel
-PASS=rachel123
+PASS=rachel11duz0w9hs0s8hs3891
 
 #Make sure script is run as root
 if [ "$(id -u)" != "0" ]; then
