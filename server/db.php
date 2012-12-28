@@ -1,9 +1,9 @@
 <?php
 
 $host="localhost";
-$database="Childrens";
-$user="Childrens";
-$password="test";
+$database="Rachel";
+$user="Rachel";
+$password="Rachelspassword";
 
 mysql_connect($host, $user, $password) or die(mysql_error());
 
