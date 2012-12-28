@@ -23,7 +23,7 @@ The server install is like pretty much every other php product, except I don't h
 
 Using phpmyadmin or your tool of choice insert the rachel.sql from the server folder.
 
-Then change the info in db.php to match your database.
+Then change the info in db.php to match your database user, or anychanges you made to database name.
 
 Then simply pop the code into your web root. 
 
