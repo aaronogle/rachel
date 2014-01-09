@@ -1,6 +1,10 @@
 # RaCHeL Project
 Started for Rolling Hills Consolidated Library for their childrens computers.
 
+## Changes
+1/09/2014 - Started building a new client using node-webkit.
+
+
 ## Client Install
 
 Made the install process pretty straight forward.

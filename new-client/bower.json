@@ -1,0 +1,22 @@
+{
+  "name": "rachel",
+  "version": "0.0.1",
+  "homepage": "https://github.com/aaronogle/rachel",
+  "authors": [
+    "Aaron Ogle <aaron@geekgonecrazy.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "*",
+    "angular": "~1.2.7",
+    "angular-animate": "~1.2.7"
+  }
+}
