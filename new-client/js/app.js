@@ -5,6 +5,7 @@ app.config(function($controllerProvider) {
 
 angular.module('rachel').controller('browser', ['$rootScope', '$scope', '$log', '$sce', function($rootScope, $scope, $log, $sce) {
 	var config = require('./config.js');
+	
 	$scope.sites = config.sites;
 	
 	$scope.loadActivity = function (url) {

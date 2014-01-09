@@ -3,5 +3,8 @@
 	"main" : "index.html",
 	"window" : {
 		"toolbar" : false
+	},
+	"webkit" : {
+		"plugin" : true
 	}
 }
