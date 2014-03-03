@@ -1,0 +1,12 @@
+<div id="splashPage" ng-hide="activity">
+    <div id="Banner">
+        <h1>RHCL Childrens Computer</h1>
+    </div>
+    <div id="applist">
+        <a ng-click="loadActivity(site.url)" ng-repeat="site in sites"><img ng-src="images/{{site.icon}}" /></a>
+    </div>
+
+    <div id="footer">
+        <h2>These computers are meant for use by children age 9 and under.<br />Anyone older must sign up to use the computers by the reference desk.</h2>
+    </div>
+</div>
