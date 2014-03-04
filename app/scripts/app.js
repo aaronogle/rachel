@@ -1,19 +1,17 @@
 'use strict';
 
-angular.module('rachelApp', [
-  'ngRoute'
-])
-  .config(function ($routeProvider) {
+angular.module('rachelApp', ['ngRoute'])
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/webActivity', {
+      .when('/webactivity', {
         templateUrl: 'views/webactivity.html',
         controller: 'WebactivityCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);

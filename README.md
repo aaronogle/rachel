@@ -4,33 +4,31 @@ Started for Rolling Hills Consolidated Library for their childrens computers.
 ## Changes
 1/09/2014 - Started building a new client using node-webkit.
 
+## Building the new client
 
-## Client Install
+Node.js and npm are the first preReqs.
 
-Made the install process pretty straight forward.
-```Bash
-sudo apt-get install -y git expect
-cd /opt/
-sudo git clone git://github.com/aaronogle/rachel.git
-cd rachel
-sudo ./installclient.sh
-```
-When it shows the password stuff ignore it. Its auto entering a password. 
-If you want your own secure password, simply run "sudo passwd rachel" after the install is finished. 
-I would recommend doing this. You should never need to use the password.
+If you are on linux install node using:
+
+`sudo add-apt-repository -y ppa:chris-lea/node.js`
+`sudo apt-get update`
+`sudo apt-get install nodejs`
+
+Once you have those installed do:
+
+`npm install -g grunt-cli bower`
+
+If you're on linux chances are you'll need to prefix that with `sudo`.
+
+Then cd into the folder and run:
+`npm install`
+
+Then
+`bower install`
+
+To actually build you then need to run:
+`grunt build`
 
 
-## Server Install
-Requirements: PHP, MySQL, Python
-
-The server install is like pretty much every other php product, except I don't have a pretty little installer.
-
-Using phpmyadmin or your tool of choice insert the rachel.sql from the server folder.
-
-Then change the info in db.php to match your database user, or anychanges you made to database name.
-
-Then simply pop the code into your web root. 
-
-Access admin interface at http://[your-ip]/admin.php
-
-Currently the interface is very basic, if you need security look at adding password protect to an .htaccess.  Security will be added in the future.
+If it gripes about compass you may need to install ruby and do `gem install compass`
+**Note these instructions are very likely missing something.  So a little troubleshooting may be required.**
