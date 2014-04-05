@@ -19,20 +19,23 @@ angular.module('rachelApp')
 		
 		var wildcard = '';
 		var host = location.host.split('.');
-
+		
 		if (host.length > 2) {
-			wildcard = host;
+			wildcard = angular.copy(host);
 			wildcard[0] = '*';
 			wildcard = wildcard.join('.');
 			host = host.join('.');
 		} else {
+			wildcard = angular.copy(host);
+			wildcard = '*.' + wildcard.join('.');
 			host = host.join('.');
-			wildcard = '*.'+host;
 		}
 		
+		
 		if ($scope.whitelist.indexOf(host) > -1 || $scope.whitelist.indexOf(wildcard) > -1) {
-			console.log('matches');
+			console.log('matches', host, wildcard);
 		} else {
+			console.log('rejected', host, wildcard);
 			$scope.$apply(function() {
 				$location.path('/');
 			});
