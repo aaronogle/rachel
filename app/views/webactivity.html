@@ -1,3 +1,3 @@
 <div class="webActivity">
-    <iframe id="activityFrame" nwdisable nwfaketop ng-src="{{trustSrc(activity)}}"></iframe>
+    <iframe id="activityFrame" nwdisable nwfaketop ng-src="{{trustSrc(activity)}}" onload="urlChange(this.contentWindow.location)"></iframe>
 </div>

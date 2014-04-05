@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             build_dir: './build',
             linux32: true,
             linux64: true,
-            mac: true
+            mac: false 
 
         },
         src: './dist/**/*'

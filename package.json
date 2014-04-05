@@ -4,7 +4,7 @@
   "dependencies": {
     "grunt": "^0.4.2",
     "grunt-node-webkit-builder": "^0.1.17",
-    "nodewebkit": "^0.8.5"
+    "nodewebkit": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

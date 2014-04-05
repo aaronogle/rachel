@@ -100,5 +100,24 @@
 			"url": "http://www.scholastic.com/ispy/games/index.htm",
 			"icon": "button_ispy.png"
 		}
+	],
+	"whitelist" : [
+		"*.bobthebuilder.com",
+		"*.cartoonnetwork.com",
+		"*.nickjr.com",
+		"*.pbskids.com",
+		"*.pbskids.org",
+		"*.scholastic.com",
+		"*.go.com",
+		"*.turner.com",
+		"*.thomasandfriends.com",
+		"*.more.net",
+		"*.tumblebooks.com",
+		"*.overture.com",
+		"www.hitentertainment.com",
+		"www.maisyfun.com",
+		"www-tc.pbskids.org",
+		"www.thomasandfriends.com",
+		"www.veggietales.com"
 	]
 }
