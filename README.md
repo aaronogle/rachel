@@ -1,9 +1,9 @@
 # RaCHeL Project
 Started for Rolling Hills Consolidated Library for their childrens computers.
 
-## Changes
-04/5/2014 - Released v1.0-Beta1 using node-webkit and angularjs.
-1/09/2014 - Started building a new client using node-webkit.
+## Changelog
+* 04/5/2014 - Released v1.0-Beta1 using node-webkit and angularjs.
+* 1/09/2014 - Started building a new client using node-webkit.
 
 ## Building the new client
 
