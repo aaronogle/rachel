@@ -1,8 +1,11 @@
 # RaCHeL Project
 Started for Rolling Hills Consolidated Library for their childrens computers.
 
+## Downloads
+Grab the latest copy [here](https://github.com/aaronogle/rachel/releases/latest).
+
 ## Changelog
-* 04/5/2014 - Released v1.0-Beta1 using node-webkit and angularjs.
+* 04/5/2014 - Released [v1.0-Beta1](https://github.com/aaronogle/rachel/releases/tag/v1.0-beta1) using node-webkit and angularjs.
 * 1/09/2014 - Started building a new client using node-webkit.
 
 ## Building the new client
